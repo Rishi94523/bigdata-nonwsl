@@ -2,6 +2,8 @@
 
 ## Non-WSL Implementation (Windows Native)
 
+> **⚠️ ACCURACY NOTE**: CPU+Memory CSV: 85% accuracy (rounding precision issues - couldn't determine TA's rounding method) | Network+Disk CSV: **100% accuracy** ✓
+
 This is a **Windows-native implementation** of the Big Data Assignment 2 that simulates Kafka producer-consumer patterns without requiring actual Kafka infrastructure.
 
 ### Quick Start
@@ -19,12 +21,14 @@ python run_pipeline.py
 After execution, you'll have:
 
 **Raw Consumer Data:**
+
 - `cpu_data.csv` - 28,800 rows from Consumer 1 (topic-cpu)
 - `mem_data.csv` - 28,800 rows from Consumer 1 (topic-mem)
 - `net_data.csv` - 28,800 rows from Consumer 2 (topic-net)
 - `disk_data.csv` - 28,800 rows from Consumer 2 (topic-disk)
 
 **Spark Job Outputs (Final Deliverables):**
+
 - `team_127_CPU_MEM.csv` - 14,400 rows with CPU+Memory aggregation and alerts
 - `team_127_NET_DISK.csv` - 14,400 rows with Network+Disk aggregation and alerts
 
@@ -47,14 +51,14 @@ pipeline.py (Producer + Broker Simulation)
 
 ### Files Description
 
-| File | Purpose |
-|------|---------|
-| `dataset.csv` | Input: 28,800 server metric records |
-| `thresholds.txt` | Alert thresholds (read at runtime) |
-| `pipeline.py` | Producer + Broker simulation + Consumers |
-| `spark_job_1.py` | Spark Job 1 (CPU & Memory windowed aggregation) |
-| `spark_job_2.py` | Spark Job 2 (Network & Disk windowed aggregation) |
-| `run_pipeline.py` | Master orchestrator (runs all steps) |
+| File              | Purpose                                           |
+| ----------------- | ------------------------------------------------- |
+| `dataset.csv`     | Input: 28,800 server metric records               |
+| `thresholds.txt`  | Alert thresholds (read at runtime)                |
+| `pipeline.py`     | Producer + Broker simulation + Consumers          |
+| `spark_job_1.py`  | Spark Job 1 (CPU & Memory windowed aggregation)   |
+| `spark_job_2.py`  | Spark Job 2 (Network & Disk windowed aggregation) |
+| `run_pipeline.py` | Master orchestrator (runs all steps)              |
 
 ### Configuration
 

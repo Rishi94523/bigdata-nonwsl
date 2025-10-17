@@ -1,5 +1,7 @@
 # Assignment 2 Deliverables Guide
 
+> **⚠️ ACCURACY NOTE**: CPU+Memory CSV: 85% accuracy (rounding precision issues - couldn't determine TA's rounding method) | Network+Disk CSV: **100% accuracy** ✓
+
 As per [the assignment](https://pesubigdata2025.super.site/assignment-2-real-time-server-monitoring-distributed-pipeline-with-apache-kafka-and-spark), here are all 5 required deliverables:
 
 ---

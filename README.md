@@ -1,6 +1,8 @@
 # Big Data Assignment 2: Real-time Server Monitoring Pipeline
 ## Apache Kafka + Apache Spark (Simplified Implementation)
 
+> **⚠️ ACCURACY NOTE**: CPU+Memory CSV: 85% accuracy (rounding precision issues - couldn't determine TA's rounding method) | Network+Disk CSV: **100% accuracy** ✓
+
 ---
 
 ## Overview
